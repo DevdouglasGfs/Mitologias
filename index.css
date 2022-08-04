@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700;900&display=swap');
+
+@font-face {
+    font-family: Neothic;
+    src: url(./fonts/Neothic.ttf);
+}
+
+@font-face {
+    font-family: romanSD;
+    src: url(./fonts/RomanSD.ttf);
+}
+
+@font-face {
+    font-family: ColdiacOTF;
+    src: url(./fonts/Coldiac.otf);
+}
+
+@font-face {
+    font-family: ColdiacTTF;
+    src: url(./fonts/Coldiac.ttf);
+}
+
+@font-face {
+    font-family: Emporo;
+    src: url(./fonts/EMPORO.TTF);
+}
+
+:root {
+    --color-primary: rgb(0, 113, 133);
+    --color-secundary: rgb(0, 194, 228);
+    --black-scale1: #3d3d3d;
+    --black-scale2: #4d4d4d;
+    --golden-scale1: #F2BD1D;
+    --golden-scale2: #BF7E04;
+    --golden-scale3: #F2AE2E;
+    --c-dark-mode1: #252525;
+    --c-dark-mode2: #292929;
+    --c-dark-mode3: #212121;
+    --c-default: #212121;
+    --color-piramid-1: #2f4f4f;
+    --color-piramid-2: #a0522d;
+    --color-piramid-3: #696969;
+    --color-piramid-4: #f4a460;
+    --font-paragraph: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-weight-light: 100;
+    --font-h: Helvetica, ColdiacOTF, ColdiacTTF, serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header-global {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2.5rem;
+    box-shadow: -1px 0px 1px 0px var(--black-scale2);
+    font-family: var(--font-paragraph);
+    user-select: none;
+}
+
+.header-global>h1 {
+    flex: 0 1 auto;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--golden-scale1);
+    font-family: var(--font-h);
+    text-transform: uppercase;
+    text-rendering: optimizeSpeed;
+}
+
+.header-global .return-index {
+    flex: 0 0 auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-primary);
+    padding: .6rem;
+    transition: all 200ms;
+}
+
+.header-global .return-index:hover {
+    transition: all 200ms;
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.header-global .extra-items {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-global .extra-items .appearance {
+    position: relative;
+    flex: 0 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-primary);
+    padding: .5rem;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.header-global .extra-items .appearance:hover {
+    transition: all 200ms;
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.header-global .extra-items .appearance .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.header-global .extra-items .appearance:hover .dropdown {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: var(--color-primary);
+}
+
+.header-global .extra-items .appearance:hover .dropdown li {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.header-global .extra-items .appearance:hover .dropdown a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: .3rem;
+    color: #fff;
+}
+
+.header-global .extra-items .appearance:hover .dropdown a:hover {
+    background-color: #fff;
+    color: var(--color-primary);
+}
+
+.header-global .extra-items .contents {
+    position: relative;
+    flex: 0 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-primary);
+    padding: .5rem;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.header-global .extra-items .contents:hover {
+    transition: all 200ms;
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.header-global .extra-items .contents .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    ;
+}
+
+.header-global .extra-items .contents:hover .dropdown {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+.header-global .extra-items .contents .dropdown li {
+    flex: 0 0 auto;
+    width: 100%
+}
+
+.header-global .extra-items .contents .dropdown a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: .3rem;
+    color: #fff;
+}
+
+.header-global .extra-items .contents .dropdown a:hover {
+    background-color: #fff;
+    color: var(--color-primary);
+}
+
+/*--- Main do index.html ---*/
+.main-index {
+    height: 100%;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+/*--- Main da página da mitologia ---*/
+.main-mitology {
+    height: 100%;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.mitology-page {}
+
+.mitology-page .banner {
+    height: 50vh;
+    background-image: url(imgs/piramide1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-primary);
+    position: relative;
+}
+
+.mitology-page .banner .title-unique {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 5vh;
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 1.4rem;
+    font-family: var(--font-h);
+    text-transform: uppercase;
+    margin: 0;
+    word-break: keep-all;
+    color: #fff;
+    background-color: rgba(105, 105, 105, 0.769);
+}
+
+.header-index {
+    background-image: url(imgs/piramide1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 191, 255);
+    height: 50vh;
+    position: relative;
+    color: #fff;
+}
+
+.header-index>.title-unique {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-rendering: optimizeSpeed;
+    font-family: var(--font-h);
+}
+
+.header-index>.text-info {
+    font-size: 1.2rem;
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-55%);
+    width: 100%;
+    text-transform: capitalize;
+    text-rendering: optimizeSpeed;
+    font-family: var(--font-h);
+}
+
+.wrapper-mitologys {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.mitology {
+    flex: 1 0 20rem;
+    box-shadow: .5px .5px 2px .2px var(--black-scale2);
+    border-radius: 5px;
+}
+
+.mitology-header {}
+
+.mitology-header>.title-c {
+    text-align: center;
+    margin: .5rem .5rem 0 .5rem;
+    color: var(--golden-scale3);
+    font-family: var(--font-h);
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    border-bottom: 2px dotted var(--golden-scale3);
+}
+
+.mitology-header .title-l {
+    margin: 0 .5rem 0 .5rem;
+    font-family: var(--font-h);
+    color: var(--golden-scale3);
+    font-size: 1.7rem;
+}
+
+.gods .mitology-header .title-l,
+.politic .mitology-header .title-l,
+.religion .mitology-header .title-l {
+    border-bottom: 2px dotted var(--golden-scale3);
+    text-align: center;
+}
+
+.mitology-header .text-info {
+    line-break: normal;
+    word-break: keep-all;
+    margin: .5rem;
+    font-family: var(--font-paragraph);
+    font-weight: var(--font-weight-light);
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.mitology:hover .images-slide img {
+    transition: all 200ms;
+    opacity: 1;
+}
+
+.info {
+    margin: 0 .5rem 0 .5rem;
+    font-family: var(--font-paragraph);
+    text-indent: 1rem;
+    text-align: justify;
+    font-size: .9em;
+}
+
+.icon {
+    vertical-align: middle;
+}
+
+.intro {
+    text-align: center;
+    font-family: var(--font-paragraph);
+    font-size: .8em;
+    word-wrap: break-word;
+}
+
+.god--name {
+    margin: 0 0 0 .5rem;
+    color: var(--golden-scale3);
+    font-family: var(--font-p);
+    font-size: 1.2em;
+}
+
+.image-god {
+    background-image: url(imgs/banner-deus-ra.jpg);
+    background-color: var(--golden-scale1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 30vh;
+    padding: .5rem;
+}
+
+.image-god .caption {
+    background-color: rgba(255, 255, 255, 0.572);
+    width: 4rem;
+    font-family: var(--font-paragraph);
+    text-align: center;
+    font-weight: 500;
+}
+
+.content .god {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content .info {
+    margin: 0 .5rem 0 .5rem;
+    flex: 1 1 auto;
+}
+
+.images-slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.images-slide a {
+    display: block;
+}
+
+.images-slide img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    opacity: .8;
+    transition: all 200ms;
+}
+
+/*.controls-slide{    position: absolute;    top: 50%;    width: 100%;    height: auto;    display: flex;    align-items: center;    justify-content: space-between;}.controls-slide > a{    background-color: #fff;    padding: .5rem;    border-radius: 50%;    text-decoration: none;}*/
+.controls-slide {}
+
+.controls-slide>a.prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-decoration: none;
+    background-color: #fff;
+    padding: .5rem;
+    opacity: .5;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transition: all 200ms;
+}
+
+.controls-slide>a.prev:hover {
+    transition: all 200ms;
+    opacity: 1;
+}
+
+.controls-slide>a.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    text-decoration: none;
+    background-color: #fff;
+    padding: .5rem;
+    opacity: .5;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    width: 5%;
+    transition: all 200ms;
+}
+
+.controls-slide>a.next:hover {
+    transition: all 200ms;
+    opacity: 1;
+}
+
+.article-members-dir {
+    background-color: #fff;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.header-members-list {}
+
+.title-l {
+    text-align: left;
+    margin: .5rem auto 0 .5rem;
+    color: var(--golden-scale3);
+    font-size: 1.6em;
+    text-transform: capitalize;
+    text-rendering: optimizeSpeed;
+    font-family: var(--font-h);
+}
+
+.header-members-list>.title-l {
+    text-align: left;
+    margin: .5rem auto 0 .5rem;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    text-rendering: optimizeSpeed;
+}
+
+.info-members-list {
+    flex: 0 0 auto;
+}
+
+.info-members-list>p {
+    flex: 0 0 auto;
+    margin-top: 0;
+    margin-left: .5rem;
+}
+
+.info-members-list>img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrap-about {
+    margin: .5rem;
+}
+
+.wrap-about .about-mitology {
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-paragraph);
+    font-weight: 400;
+    font-size: .9rem;
+    transition: all 200ms;
+    color: var(--golden-scale3);
+    outline: 1px solid var(--golden-scale3);
+    border-radius: 3px;
+}
+
+.wrap-about .about-mitology:hover {
+    transition: all 200ms;
+    background-color: var(--golden-scale3);
+    color: #fff;
+}
+
+.footer-global {
+    box-shadow: 0px -.5px 2px 0px var(--black-scale2);
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.gods .god {
+    margin: 2rem 0;
+}
+
+.gods .god .god--name {
+    text-align: center;
+    font-size: 1.6em;
+    color: var(--golden-scale2);
+}
+
+.god__image {
+    margin: 0 auto;
+    display: block;
+    max-width: 50%;
+    max-height: 40vh;
+    object-fit: cover;
+}
+
+
+.banner-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.banner-section__image{
+    flex: 0 1 auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    resize: horizontal;
+}
+.banner-section__image-caption{
+    text-align: center;
+    font-family: var(--font-p);
+    font-size: .9em;
+    margin: .5rem 0 0 0;
+}
+
+
+
+.appearence-page {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.appearence-page .darkmode {
+    display: block;
+    height: 1rem;
+    width: 1rem;
+}
+
+.footer-global .copyright {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .53rem;
+    font-family: var(--font-paragraph);
+}
+
+.footer-global .helper {
+    text-align: center;
+    font-family: var(--font-paragraph);
+    font-size: .7em;
+    flex: 0 0 1rem;
+    height: 20vh;
+    width: 20vw;
+}
+
+.footer-global .helper-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.darkmode-enable {
+    background-color: var(--c-dark-mode2);
+    color: #fff;
+}
+
+.page-control{
+    display: none;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+.copyright-link{
+    text-decoration: none;
+}
+
+@media (min-width: 1020px) {
+    .mitology:last-child {
+        flex: 0 1 30rem;
+        box-shadow: .5px .5px 2px .2px var(--black-scale2);
+    }
+}
+
+@media (max-width:720px) {
+    .wrapper-mitologys {
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 500px){
+
+    .appearance{
+        display: none;
+    }
+    .contents{
+        display: none;
+    }
+    .header-global{
+        justify-content: center;
+    }
+    .return-index{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-control{
+        display: block;
+        position: fixed;
+        bottom: 2rem;
+        right: 1rem;
+        padding: .2rem;
+        border-radius: 20px;
+        user-select: none;
+    }
+    .page-control__darkmode-smartphone{
+        display: block;
+        border-radius: 50%;
+        outline: 1px solid var(--color-primary);
+        margin-bottom: .5rem;
+        padding: .3rem;
+        color: var(--color-primary);
+        background-color: #fff;
+    }
+    .page-control__go-top{
+        display: block;
+        border-radius: 50%;
+        outline: 1px solid var(--color-primary);
+        padding: .3rem;
+        color: var(--color-primary);
+        background-color: #fff;
+    }
+}
