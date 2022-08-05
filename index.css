@@ -608,12 +608,15 @@ body {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
+    user-select: none;
 }
 
 .appearence-page .darkmode {
     display: block;
-    height: 1rem;
-    width: 1rem;
+    padding: .5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 0px var(--black-scale1);
 }
 
 .footer-global .copyright {
@@ -669,9 +672,18 @@ body {
         justify-content: center;
         padding: 1rem;
     }
+
+    .images-slide img{
+        opacity: 1;
+    }
 }
 
 @media (max-width: 500px){
+
+    .images-slide img{
+        opacity: 1;
+    }
+
 
     .appearance{
         display: none;
