@@ -238,7 +238,7 @@ body {
 .mitology-page {}
 
 .mitology-page .banner {
-    height: 50vh;
+    height: 30vh;
     background-image: url(imgs/piramide1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
