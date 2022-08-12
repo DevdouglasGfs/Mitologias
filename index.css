@@ -237,7 +237,8 @@ body {
 
 .mitology-page {}
 
-.mitology-page .banner {
+
+.mitology-page__banner{
     height: 30vh;
     background-image: url(imgs/piramide1.jpg);
     background-position: center center;
@@ -246,23 +247,115 @@ body {
     background-color: var(--color-primary);
     position: relative;
 }
-
-.mitology-page .banner .title-unique {
+.mitology-page__title-unique{
     position: absolute;
     bottom: 0;
-    right: 0;
-    left: 0;
-    height: 5vh;
+    width: 100%;
     text-align: center;
     font-variant: small-caps;
     font-size: 1.4rem;
     font-family: var(--font-h);
     text-transform: uppercase;
     margin: 0;
+    padding: .5rem;
     word-break: keep-all;
     color: #fff;
     background-color: rgba(105, 105, 105, 0.769);
 }
+.mitology-page__intro{
+    text-align: center;
+    font-family: var(--font-paragraph);
+    font-size: .8em;
+    word-wrap: break-word;
+}
+.mitology-page__title_l{
+    font-family: var(--font-h);
+    color: #fff;
+    background-color: var(--golden-scale2);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding-left: .5rem;
+}
+.mitology-page__title_c{
+    font-family: var(--font-h);
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    background-color: var(--golden-scale2);
+}
+
+
+.content-mitology{
+    padding: .5rem .5rem;
+    margin: 1rem 0;
+}
+.content-mitology_first{
+    padding: 1rem .5rem;
+}
+.content-mitology__head{}
+.content-mitology__txt-explain{
+    font-family: var(--font-paragraph);
+    text-indent: .5rem;
+    text-align: justify;
+    font-size: 1.8vh;
+    margin: .5rem 0;
+}
+.content-mitology__sub-content{
+    margin: 1rem 0;
+}
+
+
+
+
+
+
+.god{
+    border-radius: .3rem;
+    border: 2px dashed var(--golden-scale1);
+    padding: .5rem;
+    margin: 2rem 0;
+}
+.god_first{
+    border-radius: .3rem;
+    border: 2px dashed var(--golden-scale1);
+    padding: .5rem;
+    margin-top: 1rem;
+}
+
+.god__name{
+    text-align: center;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: var(--golden-scale3);
+    font-family: var(--font-paragraph);
+    margin: 0;
+}
+.god__image{
+    margin: 0 auto;
+    display: block;
+    max-width: 50%;
+    max-height: 40vh;
+    object-fit: cover;
+    height: 35vh;
+}
+.god__image_caption{
+    background-color: rgba(255, 255, 255, 0.572);
+    width: 4rem;
+    font-family: var(--font-paragraph);
+    text-align: center;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
 
 .header-index {
     background-image: url(imgs/piramide1.jpg);
@@ -319,7 +412,7 @@ body {
 
 .mitology-header {}
 
-.mitology-header>.title-c {
+.title-c {
     text-align: center;
     margin: .5rem .5rem 0 .5rem;
     color: var(--golden-scale3);
@@ -330,21 +423,14 @@ body {
     border-bottom: 2px dotted var(--golden-scale3);
 }
 
-.mitology-header .title-l {
+.title-l {
     margin: 0 .5rem 0 .5rem;
     font-family: var(--font-h);
     color: var(--golden-scale3);
     font-size: 1.7rem;
 }
 
-.gods .mitology-header .title-l,
-.politic .mitology-header .title-l,
-.religion .mitology-header .title-l {
-    border-bottom: 2px dotted var(--golden-scale3);
-    text-align: center;
-}
-
-.mitology-header .text-info {
+.text-info {
     line-break: normal;
     word-break: keep-all;
     margin: .5rem;
@@ -363,54 +449,8 @@ body {
     opacity: 1;
 }
 
-.info {
-    margin: 0 .5rem 0 .5rem;
-    font-family: var(--font-paragraph);
-    text-indent: 1rem;
-    text-align: justify;
-    font-size: .9em;
-}
-
 .icon {
     vertical-align: middle;
-}
-
-.intro {
-    text-align: center;
-    font-family: var(--font-paragraph);
-    font-size: .8em;
-    word-wrap: break-word;
-}
-
-.god--name {
-    margin: 0 0 0 .5rem;
-    color: var(--golden-scale3);
-    font-family: var(--font-p);
-    font-size: 1.2em;
-}
-
-.image-god {
-    background-image: url(imgs/banner-deus-ra.jpg);
-    background-color: var(--golden-scale1);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 30vh;
-    padding: .5rem;
-}
-
-.image-god .caption {
-    background-color: rgba(255, 255, 255, 0.572);
-    width: 4rem;
-    font-family: var(--font-paragraph);
-    text-align: center;
-    font-weight: 500;
-}
-
-.content .god {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .content .info {
@@ -564,23 +604,6 @@ body {
     margin-top: 1rem;
 }
 
-.gods .god {
-    margin: 2rem 0;
-}
-
-.gods .god .god--name {
-    text-align: center;
-    font-size: 1.6em;
-    color: var(--golden-scale2);
-}
-
-.god__image {
-    margin: 0 auto;
-    display: block;
-    max-width: 50%;
-    max-height: 40vh;
-    object-fit: cover;
-}
 
 
 .banner-section{
@@ -597,7 +620,7 @@ body {
 }
 .banner-section__image-caption{
     text-align: center;
-    font-family: var(--font-p);
+    font-family: var(--font-paragraph);
     font-size: .9em;
 }
 
@@ -647,7 +670,7 @@ body {
     color: #fff;
     background-color: var(--golden-scale2);
     text-transform: uppercase;
-    font-family: var(--font-p);
+    font-family: var(--font-paragraph);
 }
 
 
