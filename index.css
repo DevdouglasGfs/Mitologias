@@ -618,6 +618,49 @@ body {
     box-shadow: 0px 0px 4px 0px var(--black-scale1);
 }
 
+
+.members-group{
+    padding-top: 1rem;
+}
+.members-group__head{
+
+}
+.members-group__title{
+    text-align: center;
+    font-family: var(--font-h);
+    color: var(--golden-scale2);
+    margin: 1rem;
+}
+.members-group-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    border: 1px solid var(--golden-scale2);
+}
+.members-group-list__name{
+    text-align: center;
+    padding: .5rem;
+    color: #fff;
+    background-color: var(--golden-scale2);
+    text-transform: uppercase;
+    font-family: var(--font-p);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .footer-global .copyright {
     text-transform: uppercase;
     text-align: center;
