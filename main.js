@@ -6,10 +6,10 @@ const body = document.querySelector('body');
 
 darkModeButton.addEventListener('click', (e) => {
     body.classList.toggle("darkmode-enable");
-});
+})
 darkModeButtonSmartphone.addEventListener('click', (e) => {
     body.classList.toggle("darkmode-enable");
-});
+})
 
 readModeButton.addEventListener('click', (e) => {
     if (!document.fullscreenElement) {
@@ -19,4 +19,4 @@ readModeButton.addEventListener('click', (e) => {
     } else {
         document.exitFullscreen();
     }
-});
+})

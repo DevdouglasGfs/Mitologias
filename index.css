@@ -17,7 +17,7 @@
     --color-piramid-4: #f4a460;
     --font-paragraph: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --font-weight-light: 100;
-    --font-h: Helvetica, ColdiacOTF, ColdiacTTF, serif;
+    --font-h: system-ui, Helvetica, ColdiacOTF, ColdiacTTF, serif;
 }
 html {
     scroll-behavior: smooth;
@@ -46,10 +46,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 2.5rem;
-    box-shadow: -1px 0px 1px 0px var(--black-scale2);
     font-family: var(--font-paragraph);
     user-select: none;
+    box-shadow: 0px 0.4px 1px 0px var(--black-scale1);
 }
 .header-global__title-page{
     flex: 0 1 auto;
@@ -59,13 +58,14 @@ body {
     font-family: var(--font-h);
     text-transform: uppercase;
     text-rendering: optimizeSpeed;
+    font-size: 2.5rem;
 }
 .header-global__index-link {
     flex: 0 0 auto;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--golden-scale2);
-    padding: .52rem;
+    padding: .6rem;
     transition: all 200ms;
 }
 .header-global__index-link:hover {
@@ -125,7 +125,8 @@ body {
     background-color: var(--golden-scale2);
     box-shadow: 0px 1px 1px 0px var(--black-scale2);
 }
-.config-appearance__dropdown-item {
+.config-appearance__dropdown-item 
+/*--- ---*/{
     flex: 0 0 auto;
     width: 100%;
 }
@@ -219,7 +220,7 @@ body {
 .main-index {
     height: 100%;
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
 }
 
 /*--- Main da página da mitologia ---*/
@@ -230,10 +231,12 @@ body {
 }
 
 
+
+
 /*=== Configurações da página da mitologia ===*/
 .mitology-page {}
 .mitology-page__banner{
-    height: 30vh;
+    height: 40vh;
     background-image: url(imgs/piramide1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -246,14 +249,13 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-variant: small-caps;
     font-size: 1.4rem;
-    font-family: var(--font-h);
     text-transform: uppercase;
     margin: 0;
     padding: .5rem;
     word-break: keep-all;
     color: #fff;
+    font-family: var(--font-h);
     background-color: rgba(105, 105, 105, 0.769);
 }
 .mitology-page__intro{
@@ -280,6 +282,11 @@ body {
     margin: 0;
     background-color: var(--golden-scale2);
 }
+/*=== Fim das configurações da página da mitologia ===*/
+
+
+
+
 /* Configurações do conteúdo interno do página */
 .content-mitology{
     padding: .5rem .5rem;
@@ -294,11 +301,15 @@ body {
     text-indent: .5rem;
     text-align: justify;
     font-size: 1.8vh;
-    margin: .5rem 0;
+    margin: .5rem;
 }
 .content-mitology__sub-content{
     margin: 1rem 0;
 }
+
+
+
+
 /* Configurações das exibição dos Deuses */
 .god{
     border-radius: .3rem;
@@ -340,14 +351,51 @@ body {
 
 
 
+/*=== Seção de cada item introdutivo a mitologia ===*/
+.mitology {
+    flex: 0 0 25rem;
+    box-shadow: .3px .3px 1px .2px var(--black-scale2);
+    border-radius: 5px;
+}
+/*--- Conhecer a mitologia ---*/
+.mitology__wrap-about {
+    margin: .5rem;
+}
+.mitology__about-page {
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-paragraph);
+    font-weight: 600;
+    font-size: .9rem;
+    transition: all 200ms;
+    color: var(--golden-scale3);
+    outline: 1px solid var(--golden-scale3);
+    border-radius: 3px;
+}
+.mitology__about-page:hover{
+    transition: all 200ms;
+    background-color: var(--golden-scale3);
+    color: #fff;
+}
+.mitology__slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/*=== Fim da seção de cada item introdutivo das mitologias ===*/
 
 
 
 
+/*=== Cabeçalho do cabeçalho introdutivo da página index ===*/
 .header-index {
-    background-image: url(imgs/piramide1.jpg);
+    background-image: url(imgs/barter.jpg);
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
     background-color: rgb(0, 191, 255);
     height: 50vh;
     position: relative;
@@ -355,6 +403,7 @@ body {
 }
 .header-index>.title-unique {
     text-align: center;
+    text-shadow: 0px 0px 3px var(--black-scale1);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -369,14 +418,17 @@ body {
 .header-index>.text-info {
     font-size: 1.2rem;
     text-align: center;
+    text-shadow: 0px 0px 3px var(--black-scale1);
     position: absolute;
-    top: 55%;
+    top: 59%;
     transform: translateY(-55%);
     width: 100%;
     text-transform: capitalize;
     text-rendering: optimizeSpeed;
     font-family: var(--font-h);
 }
+/*=== Fim do cabeçalho explicativo da página index ===*/
+
 
 .wrapper-mitologys {
     display: -ms-flexbox;
@@ -389,14 +441,6 @@ body {
     padding: 1rem;
 }
 
-.mitology {
-    flex: 1 0 20rem;
-    box-shadow: .5px .5px 2px .2px var(--black-scale2);
-    border-radius: 5px;
-}
-
-.mitology-header {}
-
 .title-c {
     text-align: center;
     margin: .5rem .5rem 0 .5rem;
@@ -408,26 +452,16 @@ body {
     border-bottom: 2px dotted var(--golden-scale3);
 }
 
-.title-l {
-    margin: 0 .5rem 0 .5rem;
-    font-family: var(--font-h);
-    color: var(--golden-scale3);
-    font-size: 1.7rem;
-}
 
 .text-info {
     line-break: normal;
     word-break: keep-all;
     margin: .5rem;
     font-family: var(--font-paragraph);
-    font-weight: var(--font-weight-light);
+    font-size: .9rem;
 }
 
-.slide {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
+
 
 .mitology:hover .images-slide img {
     transition: all 200ms;
@@ -463,9 +497,9 @@ body {
     transition: all 200ms;
 }
 
-/*.controls-slide{    position: absolute;    top: 50%;    width: 100%;    height: auto;    display: flex;    align-items: center;    justify-content: space-between;}.controls-slide > a{    background-color: #fff;    padding: .5rem;    border-radius: 50%;    text-decoration: none;}*/
-.controls-slide {}
 
+/*=== Início dos controles de slide introdutivo a mitologia ===*/
+.controls-slide {}
 .controls-slide>a.prev {
     position: absolute;
     top: 50%;
@@ -479,12 +513,10 @@ body {
     border-bottom-right-radius: 50%;
     transition: all 200ms;
 }
-
 .controls-slide>a.prev:hover {
     transition: all 200ms;
     opacity: 1;
 }
-
 .controls-slide>a.next {
     position: absolute;
     top: 50%;
@@ -499,102 +531,24 @@ body {
     width: 5%;
     transition: all 200ms;
 }
-
 .controls-slide>a.next:hover {
     transition: all 200ms;
     opacity: 1;
 }
-
-.article-members-dir {
-    background-color: #fff;
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-.header-members-list {}
-
-.title-l {
-    text-align: left;
-    margin: .5rem auto 0 .5rem;
-    color: var(--golden-scale3);
-    font-size: 1.6em;
-    text-transform: capitalize;
-    text-rendering: optimizeSpeed;
-    font-family: var(--font-h);
-}
-
-.header-members-list>.title-l {
-    text-align: left;
-    margin: .5rem auto 0 .5rem;
-    font-size: 1.6rem;
-    text-transform: capitalize;
-    text-rendering: optimizeSpeed;
-}
-
-.info-members-list {
-    flex: 0 0 auto;
-}
-
-.info-members-list>p {
-    flex: 0 0 auto;
-    margin-top: 0;
-    margin-left: .5rem;
-}
-
-.info-members-list>img {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.wrap-about {
-    margin: .5rem;
-}
-
-.wrap-about .about-mitology {
-    display: block;
-    padding: .5rem;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: var(--font-paragraph);
-    font-weight: 400;
-    font-size: .9rem;
-    transition: all 200ms;
-    color: var(--golden-scale3);
-    outline: 1px solid var(--golden-scale3);
-    border-radius: 3px;
-}
-
-.wrap-about .about-mitology:hover {
-    transition: all 200ms;
-    background-color: var(--golden-scale3);
-    color: #fff;
-}
-
-.footer-global {
-    box-shadow: 0px -.5px 2px 0px var(--black-scale2);
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 1rem;
-    margin-top: 1rem;
-}
+/*=== Fim dos controles do slide ===*/
 
 
 
+
+
+
+
+/*=== Componentes dos banner de images das mitologias ===*/
 .banner-section{
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 1.5rem;
 }
 .banner-section__image{
     flex: 0 1 auto;
@@ -608,16 +562,18 @@ body {
     font-family: var(--font-paragraph);
     font-size: .9em;
 }
+/*=== Fim dos componentes dos banners das imagens ===*/
 
 
 
+
+/*=== Componentes para configuração da aparência das páginas ===*/
 .appearence-page {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
     user-select: none;
 }
-
 .appearence-page .darkmode {
     display: block;
     padding: .5rem;
@@ -625,8 +581,17 @@ body {
     border-radius: 50%;
     box-shadow: 0px 0px 4px 0px var(--black-scale1);
 }
+.darkmode-enable {
+    background-color: var(--c-dark-mode2);
+    color: #fff;
+}
+/*=== Fim dos componentes para configuração da aparência das páginas ===*/
 
 
+
+
+
+/*=== Exibição dos membros da mitologia ===*/
 .members-group{
     padding-top: 1rem;
 }
@@ -657,26 +622,31 @@ body {
     text-transform: uppercase;
     font-family: var(--font-paragraph);
 }
+/*=== Fim dos membros da mitologia ===*/
 
 
 
 
 
-
-
-
-
-
-
-
-.footer-global .copyright {
+/*=== Componentes do footer do site ===*/
+.footer-global {
+    box-shadow: 0px -.5px 2px 0px var(--black-scale2);
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+.footer-global__copyright {
     text-transform: uppercase;
     text-align: center;
     font-size: .53rem;
     font-family: var(--font-paragraph);
 }
-
-.footer-global .helper {
+.footer-global__helper {
     text-align: center;
     font-family: var(--font-paragraph);
     font-size: .7em;
@@ -684,36 +654,31 @@ body {
     height: 20vh;
     width: 20vw;
 }
-
-.footer-global .helper-member img {
+.footer-global__helper-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     overflow: hidden;
 }
+/*=== fim dos componentes do footer do site ===*/
 
-.darkmode-enable {
-    background-color: var(--c-dark-mode2);
-    color: #fff;
-}
+
+
 
 .page-control{
     display: none;
 }
 
-.txt-center{
-    text-align: center;
-}
-
 .copyright-link{
     text-decoration: none;
+    color: rgb(0, 113, 133);
+}
+.copyright-link:hover{
+    text-decoration: underline;
 }
 
 @media (min-width: 1020px) {
-    .mitology:last-child {
-        flex: 0 1 30rem;
-        box-shadow: .5px .5px 2px .2px var(--black-scale2);
-    }
+    
 }
 
 @media (max-width:720px) {
